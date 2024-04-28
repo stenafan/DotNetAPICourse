@@ -43,7 +43,7 @@ namespace HelloWorld
             Console.WriteLine(myComputer.Motherboard);
             Console.WriteLine(myComputer.HasWifi);
             Console.WriteLine(myComputer.ReleaseDate);
-            Console.WriteLine(myComputer.VideoCard);
+            
         }
 
     }
