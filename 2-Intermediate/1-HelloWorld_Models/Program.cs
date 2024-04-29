@@ -1,11 +1,17 @@
 ﻿using System;
+using System.Data;
 using System.Text.RegularExpressions;
+// using Dapper;
+// using Microsoft.Data.SqlClient;
+// using Microsoft.EntityFrameworkCore;
+// using Microsoft.EntityFrameworkCore.SqlServer;
+
+
 
 namespace HelloWorld
 {
     public class Computer
-    {
-        // private string _motherboard;
+    {       
         public string Motherboard { get; set; }
         public int CPUCores { get; set; }
         public bool HasWifi { get; set; }
@@ -30,6 +36,10 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            string connectionString = "Server=localhost;Database=DotNetCourseDatabase;TrustServerCertificate=true;Trusted_Connection=true;";
+
+            IDbConnection dbConnection = new IDbConnection(connectionString);
+
             Computer myComputer = new Computer() 
             {
                 Motherboard = "Z690",
